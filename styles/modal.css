@@ -1,0 +1,55 @@
+.modal-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    background: rgba(7, 9, 17, 0.8);
+}
+
+.modal-wrapper .modal {
+    width: min(59rem, 90%);
+    background: white;
+    margin: auto;
+
+    border-radius: 0.8rem;
+
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    
+    padding: 6.4rem; 
+}
+
+.modal-wrapper .modal h2 {
+    margin-bottom: 1.2rem;
+    line-height: 3.4rem;
+}
+
+
+.modal-wrapper .modal p {
+    line-height: 2.6rem;
+    margin-bottom: 2.4rem;
+    color: var(--gray-dark);
+}
+
+.modal-wrapper .modal form input {
+    width: min(30.2rem, 70%);
+    margin-bottom: 4rem;
+    height: 48px;
+
+    border-color: var(--blue);
+}
+
+.modal-wrapper .modal .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;    
+}
+
+.modal-wrapper .modal .buttons button,
+.modal-wrapper .modal .buttons .button {
+    padding: 1.3rem 3.2rem;
+}

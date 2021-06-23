@@ -18,8 +18,8 @@ html {
 
     --gray-dark: #4d5e77;
     --gray-blue: #a1b2cd;
-    --gray-medium: #d3d9e2;
     --gray-light: #e5eaf1;
+    --gray-medium: #eaecf2;
 
     --hover-blue: #5699ff;
     --hover-red: #ea4b65;
@@ -102,7 +102,19 @@ button {
     border: 0.2rem solid var(--blue);
 }
 
-button:hover, .button:hover {
+button.red,
+.button.red {
+    background: var(--red);
+}
+
+button.gray,
+.button.gray {
+    background: var(--gray-light);
+    border: none;
+}
+
+button:hover,
+.button:hover {
     filter: brightness(1.2);
 }
 

@@ -10,6 +10,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="./styles/global.css">
         <link rel="stylesheet" href="./styles/room.css">
+        <link rel="stylesheet" href="./styles/modal.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +63,7 @@
                         <div class="questions-wrapper">
                             <div class="question-content">
                                 <div class="user">
-                                    <img src="/assets/avatar.svg" alt="Avatar">
+                                    <img src="/assets/user.svg" alt="Avatar">
                                     
                                     <div class="questions">
                                         <p>Qual a diferença entre const, var e let no Javascript?</p>
@@ -85,7 +86,7 @@
                         <div class="questions-wrapper">
                             <div class="question-content">
                                 <div class="user">
-                                    <img src="/assets/avatar.svg" alt="Avatar">
+                                    <img src="/assets/user.svg" alt="Avatar">
                                     
                                     <div class="questions">
                                         <p>O que é Typescript?</p>
@@ -105,10 +106,10 @@
                             </div>
                         </div>
 
-                        <div class="questions-wrapper">
+                        <div class="questions-wrapper read">
                             <div class="question-content">
                                 <div class="user">
-                                    <img src="/assets/avatar.svg" alt="Avatar">
+                                    <img src="/assets/user.svg" alt="Avatar">
                                     
                                     <div class="questions">
                                         <p>O que é Javascript?</p>
@@ -117,10 +118,6 @@
                             </div>
                             
                             <div class="actions">
-                                <a href="#" class="check">
-                                    <img src="/assets/check.svg" alt="Marcar como lida">
-                                    Marcar como lida
-                                </a>
                                 <a href="#" class="delete">
                                     <img src="/assets/trash.svg" alt="Exvluir">
                                     Excluir
@@ -131,5 +128,26 @@
                 </section>
             </main>
         </div>
+
+        <!-- MODAL -->
+
+        <div class="modal-wrapper">
+            <div class="modal">
+                <h2>Excluir pergunta</h2>
+                <p>Tem certeza que você deseja excluir  esta pergunta?</p>
+
+                <form action="">
+                    <label for="password" class="sr-only">Digite sua senha admin</label>
+                    <input type="password" name="password" id="password" placeholder="Digite sua senha">
+
+                    <div class="buttons">
+                        <span class="button gray">Cancelar</span>
+
+                        <button type="button" class="red">Sim, excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </body>
 </html>
