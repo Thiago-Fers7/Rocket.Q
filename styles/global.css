@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    --black: #0d114f;
+    --white: #fafafa;
+    --red: #e83f5b;
+    --light-blue: #e0ecff;
+    --blue: #3485ff;
+    --background: #fbfcff;
+    --overlay: #040911;
+    --icons-details: #a5b0c1;
+
+    --gray-dark: #4d5e77;
+    --gray-blue: #a1b2cd;
+    --gray-medium: #d3d9e2;
+    --gray-light: #e5eaf1;
+
+    --hover-blue: #5699ff;
+    --hover-red: #ea4b65;
+    --hover-gray: #8794a7;
+
+    font-size: 62.5%; /* 10px - para ficar mais fácil de calcular todas as outras medidas */
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: var(--background);
+}
+
+body,
+button,
+input,
+textarea {
+    /* intervalo de tamanho */
+    font-family: "Open Sans", sans-serif;
+
+    font-size: clamp(14px, 1.6rem, 2vw);
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: var(--black);
+    font-size: clamp(2.8rem, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+button,
+.button,
+input {
+    border-radius: 0.8rem;
+    height: 5rem;
+}
+
+button,
+.button {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    line-height: 0;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    transition: filter 0.2s;
+}
+
+button {
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 0.8rem;
+}
+
+.button {
+    color: var(--blue);
+    border: 0.2rem solid var(--blue);
+}
+
+button:hover, .button:hover {
+    filter: brightness(1.2);
+}
+
+input {
+    padding: 0 1.2rem 0 1.6rem;
+    border: 0.2rem solid var(--gray-blue);
+    margin-bottom: 1.8rem;
+}
+
+.content header {
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img {
+    width: 16.7rem;
+}
