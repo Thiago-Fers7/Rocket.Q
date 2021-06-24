@@ -16,8 +16,6 @@
 
     visibility: hidden;
     opacity: 0;
-
-    transition: 0.2s;
 }
 
 .modal-wrapper .modal {
