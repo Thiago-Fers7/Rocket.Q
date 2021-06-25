@@ -14,6 +14,8 @@ server.use(express.static('public'))
 // Definindo a pasta que engine está
 server.set('views', path.join(__dirname, 'views'))
 
+// Midway (está entrea a rota e o destino dessa rota)
+// urlencoded decodifica o conteúdo vindo da url
 server.use(express.urlencoded({extended: true}))
 
 // Habilitando as rotas definidas no aquivo routes.js
