@@ -8,7 +8,12 @@ module.exports = {
         let roomId = ''
 
         for (let i = 0; i < 6; i++) {
-            roomId += String(Math.floor(Math.random() * 9))
+            if (i === 0) {
+                roomId = String(Math.floor(Math.random() * (10 - 1) + 1))
+            } else {
+                roomId += String(Math.floor(Math.random() * 10))
+
+            }
         }
 
         await db.run(`INSERT INTO rooms(
@@ -18,10 +23,8 @@ module.exports = {
             ${parseInt(roomId)},
             ${pass}
         )`)
-
+        
         await db.close()
-
-        console.log(roomId, pass)
 
         res.redirect(`/room/${roomId}`)
     }
