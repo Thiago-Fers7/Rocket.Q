@@ -4,28 +4,42 @@ module.exports = {
     async create(req, res) {
         const db = await Database()
         const pass = req.body.password
-
+        let isRoom = true
         let roomId = ''
 
-        for (let i = 0; i < 6; i++) {
-            if (i === 0) {
-                roomId = String(Math.floor(Math.random() * (10 - 1) + 1))
-            } else {
-                roomId += String(Math.floor(Math.random() * 10))
+        while (isRoom) {
+            // Gera número da sala
+            for (let i = 0; i < 6; i++) {
+                if (i === 0) {
+                    roomId = String(Math.floor(Math.random() * (10 - 1) + 1))
+                } else {
+                    roomId += String(Math.floor(Math.random() * 10))
+                }
+            }
 
+            // Verificar se número já existe
+            const roomsExistIds = await db.all(`SELECT id FROM rooms`)
+            isRoom = roomsExistIds.some(roomExistId => roomExistId === roomId)
+
+            if (!isRoom) {
+                // Inseri a sala no banco
+                await db.run(`INSERT INTO rooms(
+                    id,
+                    pass
+                ) VALUES (
+                    ${parseInt(roomId)},
+                    ${pass}
+                )`)
             }
         }
 
-        await db.run(`INSERT INTO rooms(
-            id,
-            pass
-        ) VALUES (
-            ${parseInt(roomId)},
-            ${pass}
-        )`)
-        
         await db.close()
 
         res.redirect(`/room/${roomId}`)
+    },
+
+    open(req, res) {
+        const roomId = req.params.room
+        res.render('room', {roomId})
     }
 }
