@@ -9,10 +9,10 @@ module.exports = {
         const action = req.params.action
         const password = req.body.password
 
-        
+
         // Verifica se senha está correta
         const verifyRoom = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`)
-        
+
         if (verifyRoom.pass == password) {
             if (action == "delete") {
                 await db.run(`DELETE FROM questions WHERE id = ${questionIndex}`)
@@ -22,11 +22,10 @@ module.exports = {
 
             res.redirect(`/room/${roomId}`)
         } else {
-            res.render('passIncorrect', {roomId})
+            res.render('passIncorrect', { roomId })
         }
 
         await db.close()
-
     },
 
     async create(req, res) {
