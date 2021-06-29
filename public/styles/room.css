@@ -1,4 +1,9 @@
-.content {
+.no-questions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}.content {
     max-width: min(112rem, 80%);
 }
 
@@ -129,3 +134,32 @@ main #question-form textarea#question {
     background: var(--gray-blue);
 }
 
+/* No questions */
+
+.no-questions {
+    margin-top: 5.3rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.3rem;
+}
+
+.no-questions img {
+    width: 15rem;
+}
+
+.no-questions strong {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: var(--black);
+    font-size: clamp(1.8rem, 5vw, 1.8rem);
+    line-height: 2.7rem;
+}
+
+.no-questions p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.9rem;
+    font-size: 1.4rem;
+}

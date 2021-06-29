@@ -61,10 +61,13 @@
                 <section id="questions">
                     <h2 class="sr-only">Perguntas da comunidade</h2>
 
-                    
                     <div class="questions">
-                        <!-- Not read -->
 
+                        <% if (isNoQuestions){ %>
+                            <%- include('parts/no-question') %>
+                        <% } %>
+
+                        <!-- Not read -->
                         <% questions.forEach(question => { %>
                             <div class="questions-wrapper">
                                 <div class="question-content">
