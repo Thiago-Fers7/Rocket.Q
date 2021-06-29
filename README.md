@@ -22,4 +22,4 @@
 <br>
 
 <p>Criado por: Luiz Thiago</p>
-<p>Supporte: @rocketseat</p>
+<p>Suporte: @rocketseat</p>
